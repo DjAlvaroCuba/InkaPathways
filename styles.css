@@ -1,0 +1,156 @@
+/* Reset de estilos */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sans', sans-serif;
+
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Se coloca en la parte superior */
+    left: 0; /* Se coloca a la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999; /* Asegura que esté por encima del resto de los elementos */
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center; /* Centralización del título */
+    flex-grow: 1; /* Para que ocupe el espacio restante */
+    animation: shake 1s infinite alternate; /* Animación de temblor */
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+
+main {
+    padding: 80px 0 20px; /* Ajuste para evitar que el contenido se superponga con el encabezado */
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 20px;
+    background: rgb(250, 247, 45);
+    font-size: 28px;
+   
+    transition: all 1s;
+    border-radius: 10px;
+  }
+  .btn:after, .btn:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #fff;
+    transition: all 1s;
+    
+  }
+  .btn:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    border-radius: 10px;
+  }
+  .btn:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 10px;
+  }
+  .btn:hover {
+    border-radius: 10px;
+  }
+  .btn:hover:before, .btn:hover:after {
+    width: 100%;
+    height: 100%;
+  }
+
+.destinos {
+    padding: 50px 0;
+}
+
+.destinos h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.destino {
+    text-align: center;
+}
+
+.destino img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.destino h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.destino p {
+    font-size: 16px;
+}
+
+footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
